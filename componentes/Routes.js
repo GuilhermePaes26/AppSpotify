@@ -26,6 +26,7 @@ export default function Routes() {
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
           ),
+          headerShown: false,
         }}
       />
 
@@ -37,6 +38,7 @@ export default function Routes() {
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="bookmark-music" color={color} size={size} />
           ),
+          headerShown: false,
         }}
       />
 
@@ -48,6 +50,7 @@ export default function Routes() {
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
+          headerShown: false,
         }}
       />
     </Tab.Navigator>
