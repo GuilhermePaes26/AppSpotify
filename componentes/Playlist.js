@@ -18,7 +18,7 @@ export default function Playlist() {
             <View style={estilo.footer}>
                 <View style={estilo.musicItem}>
                     <Image source={require('../assets/melhores2.jpg')} style={estilo.logo} />
-                    <Text style={estilo.titleMusic}>Funk BR - Só as melhores</Text>
+                    <Text style={estilo.titleMusic}>Pagode - Só as melhores</Text>
                 </View>
             </View>
 
