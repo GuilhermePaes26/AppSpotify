@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
 export default function Playlist() {
     return (
@@ -7,6 +7,8 @@ export default function Playlist() {
             <View style={estilo.header}>
                 <Text style={estilo.titulo}>Suas Playlists</Text>
             </View>
+            
+            {/* Lista de Playlists Existentes */}
             <View style={estilo.footer}>
                 <View style={estilo.musicItem}>
                     <Image source={require('../assets/melhores.jpeg')} style={estilo.logo} />
@@ -18,6 +20,21 @@ export default function Playlist() {
                     <Image source={require('../assets/melhores2.jpg')} style={estilo.logo} />
                     <Text style={estilo.titleMusic}>Funk BR - Só as melhores</Text>
                 </View>
+            </View>
+
+            {/* Seção para Criar Nova Playlist */}
+            <View style={estilo.newPlaylistContainer}>
+                <Text style={estilo.newPlaylistTitle}>Criar Nova Playlist</Text>
+                
+                <TextInput
+                    style={estilo.input}
+                    placeholder="Digite o nome da playlist"
+                    placeholderTextColor="#777"
+                />
+                
+                <TouchableOpacity style={estilo.button}>
+                    <Text style={estilo.buttonText}>Criar Playlist</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
@@ -54,11 +71,42 @@ const estilo = StyleSheet.create({
     footer: {
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1
+        flex: 1,
     },
     musicItem: {
         flexDirection: 'row', 
         alignItems: 'center', 
         marginBottom: 20, 
+    },
+    newPlaylistContainer: {
+        backgroundColor: '#191414',
+        padding: 20,
+        marginTop: 30,
+        borderRadius: 10,
+        alignItems: 'center',
+    },
+    newPlaylistTitle: {
+        fontSize: 24,
+        color: 'white',
+        marginBottom: 10,
+    },
+    input: {
+        width: '80%',
+        height: 40,
+        backgroundColor: '#333',
+        borderRadius: 8,
+        paddingHorizontal: 10,
+        color: 'white',
+        marginBottom: 15,
+    },
+    button: {
+        backgroundColor: '#1ed760',
+        paddingVertical: 10,
+        paddingHorizontal: 40,
+        borderRadius: 8,
+    },
+    buttonText: {
+        color: '#191414',
+        fontSize: 18,
     },
 });
